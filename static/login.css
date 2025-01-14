@@ -4,6 +4,11 @@
   box-sizing: inherit;
 }
 
+html {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #191414;
+}
+
 input[type="text"],
 select {
   width: 100%;
@@ -48,10 +53,6 @@ select {
 h2 {
   margin: 20px 20%;
   color: #ffffff;
-}
-
-body {
-  background: #191414;
 }
 
 .all-wrap {
