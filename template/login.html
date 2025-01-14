@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
     <title>Login</title>
   </head>
-{{define "header"}}
   <body>
-    <h2>Login Here</h2>
+
     <div class="all-wrap">
-      <form action="/whatever we are going to name it" method="post">
+      <form action="/whatever we are going to name it" method="post" id="form">
         <h2>Login Here</h2>
         <div class="all-input">
           <label for="name">Username</label>
           <input
             type="text"
             name="name"
-            id="name"
+            id="name"ss
             placeholder="name"
             required
           />
@@ -33,7 +33,7 @@
           />
         </div>
 
-          <button type="submit">Log In</button>
+          <button id="submit" type="submit">Log In</button>
           <p class="register">
             Don't have an account?
             <a href="/if we use name register, then href would be register"

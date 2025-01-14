@@ -5,5 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Error</title>
   </head>
-  <body></body>
+  {{define "header"}}
+  <body>
+    <nav class="navbar">
+      <a href="/" class="logo">PageName</a>
+    </nav>
+
+    <div class="container">
+      <div class="err-code">Error {{.Code of the error}}</div>
+      <h1 class="err-msg">{{.Message of the error}}</h1>
+      <a href="whatever homepage name will be" class="home-page">
+        Return {{.to the home page}}</a
+      >
+    </div>
+  </body>
 </html>
