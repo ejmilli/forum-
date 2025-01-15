@@ -7,8 +7,9 @@ const form = document.getElementById("form");
 // Create a div dynamically to display error messages
 let errorElement = document.createElement("div");
 errorElement.setAttribute("id", "error");
-errorElement.style.color = "red";
+errorElement.style.color = "white";
 errorElement.style.marginTop = "10px";
+errorElement.style.marginBottom = "10px";
 form.appendChild(errorElement);
 
 form.addEventListener("submit", (e) => {
