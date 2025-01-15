@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/register.css">
+    <link rel="stylesheet" href="/static/signup.css">
     <title>Register</title>
   </head> 
-
-{{define "header"}}
   <body>
    
     <div class="all-wrap">
-      <form action="/whatever we are going to name it" method="post" id="form">
+      <form action="/signup" method="post" id="form">
         <h2>Register Here</h2>
         <div class="all-input">
           <label for="name">Username</label>
@@ -64,7 +62,7 @@
           <button id="submit" type="submit">Register</button>
           <p class="register">
             Don't have an account?
-            <a href="/if we use name login, then href would be login"
+            <a href="/login"
               >Login</a
             >
           </p>
@@ -72,4 +70,5 @@
       </form>
     </div>
   </body>
+  <script src="/script/login-reg.js"></script>
 </html>
