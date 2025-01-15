@@ -11,7 +11,7 @@ var tpl *template.Template
 // Initialize HTML templates
 func InitializeHtml() {
 	var err error
-	tpl, err = template.ParseGlob("template/*.html") // adjust path based on folder structure
+	tpl, err = template.ParseGlob("template/*.html") 
 	if err != nil {
 		log.Fatal("Error parsing templates: ", err)
 	}
@@ -27,9 +27,8 @@ func LoginPage(w http.ResponseWriter, r *http.Request) {
 
 // SignUpPage handler
 func SignUpPage(w http.ResponseWriter, r *http.Request) {
-	// Handle sign-up form submission logic here if needed
-	// For now, we're just serving the same login page template
-	err := tpl.ExecuteTemplate(w, "login.html", nil)
+
+	err := tpl.ExecuteTemplate(w, "signup.html", nil)
 	if err != nil {
 		log.Fatal("Error executing signup page: ", err)
 	}

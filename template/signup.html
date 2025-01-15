@@ -9,26 +9,32 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- Login Form -->
-      <div class="form-wrapper sign-in" id="signInForm">
-        <form action="/login" method="post">
-          <h2>Login</h2>
+      <div class="form-wrapper sign-up" id="signUpForm" style="display: none">
+        <form action="/signup" method="post">
+          <h2>Sign Up</h2>
           <div class="input-group">
             <input type="text" name="username" required />
             <label for="username">Username</label>
+          </div>
+          <div class="input-group">
+            <input type="email" name="email" required />
+            <label for="email">Email</label>
           </div>
           <div class="input-group">
             <input type="password" name="password" required />
             <label for="password">Password</label>
           </div>
           <div class="remember">
-            <label><input type="checkbox" /> Remember me</label>
+            <label
+              ><input type="checkbox" /> I agree to the terms &
+              conditions</label
+            >
           </div>
-          <button type="submit">Login</button>
+          <button type="submit">Sign Up</button>
           <div class="signUp-link">
             <p>
-              Don't have an account?
-              <a href="/signup" id="showSignUpForm">Sign Up</a>
+              Already have an account?
+              <a href="/login" id="showSignInForm">Log In</a>
             </p>
           </div>
         </form>
