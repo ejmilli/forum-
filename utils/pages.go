@@ -31,10 +31,27 @@ func SignUpPage(w http.ResponseWriter, r *http.Request) {
 
 	err := tpl.ExecuteTemplate(w, "signup.html", nil)
 	if err != nil {
-		log.Fatal("Error executing login page: ", err)
+		log.Fatal("Error executing signup page: ", err)
 	}
 }
 
+func Terms(w http.ResponseWriter, r *http.Request) {
+ 
+	err := tpl.ExecuteTemplate(w, "terms.html", nil) 
+	if err != nil {
+		log.Fatal("Error executing terms page: ", err)
+
+	}
+}
+
+func StartaThread(w http.ResponseWriter, r *http.Request) {
+ 
+	err := tpl.ExecuteTemplate(w, "start-thread.html", nil) 
+	if err != nil {
+		log.Fatal("Error executing terms page: ", err)
+
+	}
+}
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
 

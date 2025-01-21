@@ -10,6 +10,8 @@ func main() {
 
 	utils.InitializeHtml()
 	http.HandleFunc("/", utils.HomePage)
+	http.HandleFunc("/terms",utils.Terms)
+	http.HandleFunc("/start-thread",utils.StartaThread)
 	http.HandleFunc("/login", utils.LoginPage)
 	http.HandleFunc("/signup", utils.SignUpPage)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
