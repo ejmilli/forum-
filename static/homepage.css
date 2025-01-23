@@ -1,8 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General Styles */
 body {
   background-color: #faf3e0; /* Warm Pastels Theme: Cream */
   color: #2c2c2c; /* Warm Pastels Theme: Dark Brown */
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -17,9 +23,11 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header .logo {
+header .logo a {
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
+  color: #fff;
 }
 
 header nav a {
@@ -30,12 +38,13 @@ header nav a {
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: #444;
 }
 
 .container {
   display: flex;
   margin: 20px;
+  flex-wrap: wrap;
 }
 
 /* Sidebar */
@@ -74,6 +83,53 @@ header nav a:hover {
   color: #ff847c; /* Peach */
 }
 
+/* Right Sidebar */
+.right-sidebar {
+  width: 20%;
+  background-color: #faf3e0; /* Cream */
+  color: #2c2c2c; /* Dark Brown */
+  padding: 15px;
+  border-left: 1px solid #99b898; /* Soft Green */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar .widget {
+  background-color: #faf3e0; /* Cream */
+  padding: 15px;
+  border: 1px solid #99b898; /* Soft Green */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c2c2c; /* Dark Brown */
+}
+
+.right-sidebar p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #2c2c2c; /* Dark Brown */
+}
+
+.right-sidebar .start-thread-btn {
+  display: block;
+  text-decoration: none;
+  color: #2c2c2c; /* Dark Brown */
+  font-size: 16px;
+  padding: 10px;
+  background-color: #fff; /* White */
+  border: none; /* Removed border to prevent the line */
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar .start-thread-btn:hover {
+  background-color: #ff847c; /* Peach */
+  color: #fff; /* White */
+}
+
 /* Main Content */
 .content {
   width: 60%;
@@ -87,12 +143,12 @@ header nav a:hover {
 }
 
 .post-block {
-  background-color: #fff; /* White */
-  border: 1px solid #99b898; /* Soft Green */
-  border-radius: 5px;
   padding: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  background: transparent;
+  border-top: 1px solid #ddd; /* top line */
+  border-bottom: 1px solid #ddd; /* bottom line */
+  box-shadow: none; /* Removed box shadow */
 }
 
 .post-title {
@@ -138,33 +194,51 @@ header nav a:hover {
   background-color: #ff847c; /* Peach */
 }
 
-/* Right Sidebar */
-.right-sidebar {
-  width: 20%;
+/* Filter Section */
+.filter-section {
+  margin-top: 20px;
   background-color: #faf3e0; /* Cream */
-  color: #2c2c2c; /* Dark Brown */
   padding: 15px;
-  border-left: 1px solid #99b898; /* Soft Green */
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.right-sidebar .widget {
-  margin-bottom: 20px;
-  padding: 10px;
   border: 1px solid #99b898; /* Soft Green */
-  border-radius: 5px;
-  background-color: #fff; /* White */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.right-sidebar .widget h3 {
+.filter-section h4 {
   font-size: 18px;
-  margin-bottom: 10px;
   color: #2c2c2c; /* Dark Brown */
+  margin-bottom: 10px;
 }
 
-.right-sidebar .widget p {
+.filter-section label {
   font-size: 16px;
   color: #2c2c2c; /* Dark Brown */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-section select,
+.filter-section input[type="text"] {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #99b898; /* Soft Green */
+}
+
+.filter-section button {
+  background-color: #ff847c; /* Peach */
+  color: #fff; /* White */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.filter-section button:hover {
+  background-color: #ff5e5b; /* Slightly darker peach */
 }
 
 /* Dark Mode Styles */
@@ -208,11 +282,27 @@ body.dark-mode .sidebar ul li a:hover {
   color: #ff847c; /* Peach */
 }
 
+/* Right Sidebar */
+body.dark-mode .right-sidebar {
+  background-color: #2c2c2c; /* Dark sidebar */
+  color: #e0e0e0; /* Light text */
+  border-left: 1px solid #444444; /* Darker border */
+}
+
+body.dark-mode .right-sidebar .widget {
+  border: 1px solid #99b898; /* Soft Green */
+
+  background-color: #444; /* Dark background for widgets */
+  color: #e0e0e0; /* Light text */
+  border: 1px solid #444444; /* Darker border */
+}
+
 /* Post Block */
 body.dark-mode .post-block {
   background-color: #333333; /* Dark background for posts */
   color: #e0e0e0; /* Light text */
-  border: 1px solid #444444; /* Darker border */
+  border-top: 1px solid #444444; /* Darker top border */
+  border-bottom: 1px solid #444444; /* Darker bottom border */
 }
 
 body.dark-mode .post-body {
@@ -235,14 +325,6 @@ body.dark-mode .right-sidebar {
   background-color: #2c2c2c; /* Dark sidebar */
   color: #e0e0e0; /* Light text */
   border-left: 1px solid #444444; /* Darker border */
-}
-
-body.dark-mode .right-sidebar .widget {
-  border: 1px solid #99b898; /* Soft Green */
-
-  background-color: #ff847c; /* Dark background for widgets */
-  color: #e0e0e0; /* Light text */
-  border: 1px solid #444444; /* Darker border */
 }
 
 /* Dark Mode Toggle Icon */
@@ -276,4 +358,15 @@ body.dark-mode a {
 
 body.dark-mode h2 {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .sidebar,
+  .right-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .content {
+    width: 100%;
+  }
 }
